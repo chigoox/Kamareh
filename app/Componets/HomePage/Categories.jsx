@@ -22,19 +22,18 @@ function Categories() {
         'https://selstudios.com/cdn/shop/collections/image_eff85f84-bdd9-4c2b-9d69-9d263f1489bf_1080x.jpg?v=1585906682',
         'https://selstudios.com/cdn/shop/collections/Photo_May_30_1_29_35_PM_1080x.jpg?v=1622533207',
         'https://selstudios.com/cdn/shop/collections/CABALLOCOLLECTION9_1080x.jpg?v=1628953184',
-        6,
-        7,
-        8,
-        9, 10]
+    ]
     return (
-        <div className='grid grid-cols-3 gap-4 p-2 lg:p-40 h-auto mt-20'>
-            {categories.map((category, index) => {
-                return (
-                    <Button className={`grid-item md:col-span-1123 border col-span-12 h-fit  p-0 relative`}>
-                        <Image src={category} className='h-full w-full' />
-                    </Button>
-                )
-            })}
+        <div>
+            <div className='grid grid-cols-12 gap-4 p-2 lg:p-40 h-auto mt-20'>
+                {categories.map((category, index) => {
+                    return (
+                        <Button className={`grid-item md:col-span-4 border col-span-12 h-fit  p-0 relative`}>
+                            <Image src={category} className='h-full w-full' />
+                        </Button>
+                    )
+                })}
+            </div>
         </div>
     )
 }
