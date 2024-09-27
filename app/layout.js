@@ -6,7 +6,6 @@ import { UIProvider } from './UIProvider'
 import './globals.css'
 
 
-const inter = Inter({ subsets: ['latin'] })
 const jost = Jost({ subsets: ['latin'] })
 
 export const metadata = {
