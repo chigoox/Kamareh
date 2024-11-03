@@ -5,7 +5,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import { useCallback } from 'react'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 
-export const EmblaCarousel = ({ img1, img2, img3, img4, rounded, noArrow, dim, text, text2, text3, text4, noZoom, msg1 }) => {
+export const EmblaCarousel = ({ vid, img1, img2, img3, img4, rounded, noArrow, dim, text, text2, text3, text4, noZoom, msg1 }) => {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()])
 
     const scrollPrev = useCallback(() => {
@@ -27,10 +27,22 @@ export const EmblaCarousel = ({ img1, img2, img3, img4, rounded, noArrow, dim, t
         )
     }
 
+    const SlideVideo = ({ rounded, vid, dim, text, noZoom }) => {
+        return (
+            <div className={`embla__slide ${rounded ? 'h-[5rem]' : 'h-full w-full'}   relative`}>
+                {text && <div className='text-center w-full h-screen text-4xl absolute center text-white font-bold z-[50] drop-shadow-sm shadow-black shadow-md'>{text}</div>}
+                {dim && <div className='bg-opacity-25  h-screen w-full bg-black absolute top-0'></div>}
+                <video autoPlay muted playsInline className={`h-screen rounded-none  w-screen object-cover`} src={vid} alt='' />
+            </div>
+
+        )
+    }
+
     return (
         <div className="embla relative z-0 h-screen  shadow-md shadow-black-800 ">
             <div className={`embla__viewport  bg-black-800 zoom h-full ${rounded ? 'h-[6rem]' : 'lg:h-[50rem]  h-[30rem]'}  overflow -hidden`} ref={emblaRef}>
                 <div className="embla__container h-screen  w-[100vw] relative   gap-4">
+                    {vid && <SlideVideo vid={vid} />}
                     {img1 && <Slide rounded={rounded} img={img1} text={text} dim={dim} noZoom={noZoom} />}
                     {img2 && <Slide rounded={rounded} img={img2} text={text2} dim={dim} noZoom={noZoom} />}
                     {img3 && <Slide rounded={rounded} img={img3} text={text3} dim={dim} noZoom={noZoom} />}
