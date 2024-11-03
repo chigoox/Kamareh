@@ -32,7 +32,7 @@ export const EmblaCarousel = ({ vid, img1, img2, img3, img4, rounded, noArrow, d
             <div className={`embla__slide ${rounded ? 'h-[5rem]' : 'h-full w-full'}   relative`}>
                 {text && <div className='text-center w-full h-screen text-4xl absolute center text-white font-bold z-[50] drop-shadow-sm shadow-black shadow-md'>{text}</div>}
                 {dim && <div className='bg-opacity-25  h-screen w-full bg-black absolute top-0'></div>}
-                <video autoPlay muted playsInline className={`h-screen rounded-none  w-screen object-cover`} src={vid} alt='' />
+                <video autoPlay muted playsInline loop className={`h-screen rounded-none  w-screen object-cover`} src={vid} alt='' />
             </div>
 
         )
