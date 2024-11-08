@@ -21,8 +21,12 @@ function Home() {
         img2={'/Images/ban2.jpg'}
       />
 
-      <FeaturedCategory />
-      <Categories />
+
+      <div className="center h-96">
+
+
+
+      </div>
 
 
     </div>

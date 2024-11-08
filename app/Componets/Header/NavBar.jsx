@@ -4,8 +4,8 @@ import { useCartContext } from '@/StateManager/CartContext'
 import useFilterEmptyCategory from '@/app/Hooks/useFilterCategory'
 import useWindowDimensions from '@/app/Hooks/useGetWindowDeimentions'
 import useScrollPosition from '@/app/Hooks/useScrollPosition'
-import { Image, Link } from '@nextui-org/react'
-import { MenuIcon, User2Icon } from 'lucide-react'
+import { Avatar, Image, Link, Tab, Tabs } from '@nextui-org/react'
+import { MenuIcon, ShoppingBag, User2Icon } from 'lucide-react'
 import { Bebas_Neue, Jost } from 'next/font/google'
 import { usePathname, useRouter } from 'next/navigation'
 import { Suspense, useEffect, useState } from 'react'
@@ -14,6 +14,9 @@ import { IoBag, IoBagHandle } from 'react-icons/io5'
 import LoginCard from '../General/Auth/LoginCard'
 import { NavigationEvents } from "../NavigationEvents"
 import Cart from './Cart'
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Button, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu } from "@nextui-org/react";
+import { AiFillHome, AiOutlineShoppingCart } from 'react-icons/ai'
+
 
 const alexFont = Bebas_Neue({
     weight: '400',
@@ -88,7 +91,7 @@ function NavBar() {
     }
 
     return (
-        <div className='h-22 bg-white w-full   center-col overflow-hidden'>
+        <div className='h-22 bg-white w-full   center-col '>
 
             <Cart showCart={showCart} setShowCart={setShowCart} />
             {(showLogin && (!user?.uid)) && <LoginCard toggleLogin={toggleLogin} />}
@@ -97,66 +100,149 @@ function NavBar() {
             </Suspense>
 
 
-            <nav className={` ${showMobileMenu ? ' text-black bg-opacity-100' : ' bg-opacity-0'} trans  h-auto bg-black lg:h-16 w-full fixed z-50 top-0  mt-4 `}>
+            <Navbar shouldHideOnScroll>
+                <NavbarBrand>
+                    <Image className='h-12' src={'/Logo.png'} />
 
-                <div className='absolute flex items-center justify-evenly w-full  p-2 h-full'>
-                    <div className={`${showMobileMenu ? 'h-12 opacity-100 ' : 'h-[0px]  opacity-0'}  z-10  flex items-center justify-center gap-4  text-white bg-black absolute w-full  top-10  trans`}>
-                        {menu.map((item) => {
-                            return (
-                                <MenuItem key={item} name={item} showMobileMenu={showMobileMenu} />
-                            )
-                        })}
-                    </div>
-
-                    <div className='relative z-10'>
-                        <div className='flex  justify-between  lg:w-[12]'>
-                            <button className='right-10 md:right-20 relative' onClick={toggleMobileMenu}>
-
-                                <MenuIcon size={32} color='black' className='lg:hidden' />
-                            </button>
-                            <button className='right-10 k md:right-20 relative trans' onClick={toggleDeskMenu}>
-
-                                <MenuIcon size={32} color='black' className='lg:block hidden' />
-                            </button>
-                            {true && <div className={`lg:flex justify-between w- trans-slow hidden  text-black overflow-hidden
-                                 lg:text-black ${showDeskMenu ? 'w-40' : 'w-0'}`}>
-                                {menu.map((item) => {
-                                    return (
-                                        <MenuItem disabled={showDeskMenu} key={item} name={item} />
-                                    )
-                                })}
-                            </div>}
-
-                        </div>
-
-                    </div>
-                    <div className='font1 relative z-10  font-light text-3xl text-white text-center lg:absolute'>
-                        <Link href={'/'} className={`${alexFont.className} relative hover:text-lime-600 z-30 trans top-4`}>
-                            <Image className={' h-28 object-cover '} src="/Logo.png" alt="" />
-
+                    <p className="font-bold text-inherit">Kamareh</p>
+                </NavbarBrand>
+                <NavbarContent className="hidden sm:flex gap-4" justify="center">
+                    <Dropdown>
+                        <NavbarItem>
+                            <DropdownTrigger>
+                                <Button
+                                    disableRipple
+                                    className="p-0 bg-transparent data-[hover=true]:bg-transparent"
+                                    endContent={'icons.chevron'}
+                                    radius="sm"
+                                    variant="light"
+                                >
+                                    Shop
+                                </Button>
+                            </DropdownTrigger>
+                        </NavbarItem>
+                        <DropdownMenu
+                            aria-label="ACME features"
+                            className="w-[340px]"
+                            itemClasses={{
+                                base: "gap-4",
+                            }}
+                        >
+                            <DropdownItem
+                                key="autoscaling"
+                                description="ACME scales apps to meet user demand, automagically, based on load."
+                                startContent={'icons.scale'}
+                            >
+                                Autoscaling
+                            </DropdownItem>
+                            <DropdownItem
+                                key="usage_metrics"
+                                description="Real-time metrics to debug issues. Slow query added? We’ll show you exactly where."
+                                startContent={'icons.activity'}
+                            >
+                                Usage Metrics
+                            </DropdownItem>
+                            <DropdownItem
+                                key="production_ready"
+                                description="ACME runs on ACME, join us and others serving requests at web scale."
+                                startContent={'icons.flash'}
+                            >
+                                Production Ready
+                            </DropdownItem>
+                            <DropdownItem
+                                key="99_uptime"
+                                description="Applications stay on the grid with high availability and high uptime guarantees."
+                                startContent={'icons.server'}
+                            >
+                                +99% Uptime
+                            </DropdownItem>
+                            <DropdownItem
+                                key="supreme_support"
+                                description="Overcome any challenge with a supporting team ready to respond."
+                                startContent={'icons.user'}
+                            >
+                                +Supreme Support
+                            </DropdownItem>
+                        </DropdownMenu>
+                    </Dropdown>
+                    <NavbarItem isActive>
+                        <Link href="#" aria-current="page">
+                            Featured
                         </Link>
-                        {/*  <h1 className='text-white text-xs font-bold bg-black p-1 rounded z-20 relative'>760 Springfield Ave, Irvington, NJ 07111</h1> */}
+                    </NavbarItem>
+                    <NavbarItem>
+                        <Link color="foreground" href="#">
+                            About
+                        </Link>
+                    </NavbarItem>
+                </NavbarContent>
+                <NavbarContent justify="end">
+                    <Dropdown placement="bottom-end">
+                        <DropdownTrigger>
+                            <Avatar
+                                isBordered
+                                as="button"
+                                className="transition-transform"
+                                color="secondary"
+                                name="Jason Hughes"
+                                size="sm"
+                                src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+                            />
+                        </DropdownTrigger>
+                        <DropdownMenu aria-label="Profile Actions" variant="flat">
+                            <DropdownItem key="profile" className="h-14 gap-2">
+                                <p className="font-semibold">Signed in as</p>
+                                <p className="font-semibold">zoey@example.com</p>
+                            </DropdownItem>
+                            <DropdownItem key="settings">My Settings</DropdownItem>
+                            <DropdownItem key="team_settings">Team Settings</DropdownItem>
+                            <DropdownItem key="analytics">Analytics</DropdownItem>
+                            <DropdownItem key="system">System</DropdownItem>
+                            <DropdownItem key="configurations">Configurations</DropdownItem>
+                            <DropdownItem key="help_and_feedback">Help & Feedback</DropdownItem>
+                            <DropdownItem key="logout" color="danger">
+                                Log Out
+                            </DropdownItem>
+                        </DropdownMenu>
+                    </Dropdown>
+
+                </NavbarContent>
+            </Navbar>
 
 
-                    </div>
-                    <div className='center gap-2 left-10 md:left-20 relative text-gray-700 z-10'>
-                        <div className=" ">
 
-                            <button className='relative hover:text-black trans h-12' onClick={() => { setShowCart(true) }}>
-                                {cartCount > 0 && <div className='absolute border-2  -right-2 bg-black text-white font-bold z-10 h-4 w-4 p-2 bg-opacity-75  center rounded-full '>
-                                    {(cartCount) ? cartCount : 0}
-                                </div>}
-                                <IoBagHandle size={24} />
-                            </button>
-                        </div>
 
-                        <button className='hover:text-black trans' onClick={() => { toggleLogin() }}>
-                            <User2Icon size={24} />
-                        </button>
-                    </div>
-                </div>
-
-            </nav>
+            <div className="flex w-full flex-col fixed border-4 h-40 top-0 left-0">
+                <Tabs aria-label="Options" color="primary" variant="bordered">
+                    <Tab
+                        key="photos"
+                        title={
+                            <div className="flex items-center space-x-2">
+                                <AiFillHome />
+                                <span>Photos</span>
+                            </div>
+                        }
+                    />
+                    <Tab
+                        key="music"
+                        title={
+                            <div className="flex items-center space-x-2">
+                                <ShoppingBag />
+                                <span>Music</span>
+                            </div>
+                        }
+                    />
+                    <Tab
+                        key="videos"
+                        title={
+                            <div className="flex items-center space-x-2">
+                                <AiOutlineShoppingCart />
+                                <span>Videos</span>
+                            </div>
+                        }
+                    />
+                </Tabs>
+            </div>
 
         </div >
 
