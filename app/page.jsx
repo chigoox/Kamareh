@@ -24,7 +24,7 @@ function Home() {
 
       {/* <Image className=" border-white fadeIn  h-auto object-cover" src="/LogoW.png"></Image> */}
       <div className=" relative h-screen w-full bg-black  overflow-hidden">
-        <div className="center-col mt-40 gap-1 h-full w-full">
+        <div className="center-col  gap-1 h-full w-full">
           <h1 className="text-3xl text-white text-center font-bold p-2">Where style speaks, trends resonate,  fashion flurishes</h1>
           <p className="font-light text-gray-300 text-center text-xs">unveiling a fashion destination were trends blend shamelessly with your individual style aspiration. discover today!</p>
 
@@ -54,10 +54,14 @@ function Home() {
             </Button>
           </div>
 
-          <Image className="rounded-none m-auto   object-cover w-full" src="/Images/guy (2).jpg" />
+
         </div>
       </div>
       <div className="h-screen">
+        <div className=" relative bg-black h-72 overflow-hidden">
+          <Image className="rounded-none  object-cover w-full" src="/Images/guy (2).jpg" />
+          <h1 className="text-3xl z-20 top-2 right-2 absolute text-black">Shirts</h1>
+        </div>
         <div className=" relative bg-black h-72 overflow-hidden">
           <Image className="rounded-none" src="https://cdn.shopify.com/s/files/1/0293/9277/files/08-07-24_S5_16_ZDFN1627_Charcoal_KJ_MC_10-52-31_4587_CM.jpg?v=1723152115&width=1000&height=1500&crop=center" />
           <h1 className="text-3xl z-20 top-2 left-2 absolute">Skirt</h1>
