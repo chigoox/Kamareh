@@ -18,8 +18,6 @@ function Home() {
       <EmblaCarousel
         noArrow={true}
         vid={'videos/MOV_3270.MOV'}
-        img1={'/Images/ban1.jpg'}
-        img2={'/Images/ban2.jpg'}
       />
 
 
