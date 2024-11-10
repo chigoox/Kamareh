@@ -58,7 +58,7 @@ function Home() {
           <Image className="rounded-none m-auto   object-cover w-full" src="/Images/guy (2).jpg" />
         </div>
       </div>
-      <div className="h-screen center-col">
+      <div className="h-screen mt-12">
         <CategoryTabs />
         <Products />
 
