@@ -31,21 +31,21 @@ const Products = () => {
         <div className='grid grid-cols-2 border w-full gap-4 p-4 md:grid-cols-3 lg:grid-cols-4'>
             {items.map((item, index) => {
                 return (
-                    <Card className='h-64' shadow="sm" key={index} isPressable onPress={() => console.log("item pressed")}>
-                        <CardBody className="overflow-visible p-0 relative">
+                    <Card className='h-64 rounded-none' shadow="sm" key={index} isPressable onPress={() => console.log("item pressed")}>
+                        <CardBody className="rounded-none overflow-visible p-0 relative">
                             <Image
                                 shadow="sm"
                                 radius="lg"
                                 width="100%"
                                 alt={item.images[0]}
-                                className="w-full object-cover "
+                                className="w-full object-cover rounded-none"
                                 src={item.images[0]}
                             />
-                            <Card className=" absolute z-10 w-full center-col bg-black text-white bg-opacity-70 bottom-0 right-0 text-small justify-between">
-                                <b>{item.name}</b>
-                                <p className="text-default-500">{item.price}</p>
-                            </Card>
                         </CardBody>
+                        <Card className="  z-10 w-full center-col bg-black text-white bg-opacity-70 bottom-0 right-0 text-small justify-between">
+                            <b>{item.name}</b>
+                            <p className="text-default-500">{item.price}</p>
+                        </Card>
 
                     </Card>
                 )
