@@ -105,14 +105,14 @@ function NavBar() {
             </Suspense>
 
 
-            <Navbar onMenuOpenChange={setIsMenuOpen}>
+            <Navbar className='bg-black' onMenuOpenChange={setIsMenuOpen}>
                 <NavbarContent>
                     <NavbarMenuToggle
                         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                        className="sm:hidden"
+                        className="sm:hidden text-white"
                     />
                     <NavbarBrand>
-                        <Image className='h-20 object-cover' src='/Logo.png' />
+                        <Image className='h-20 object-cover' src='/LogoW.png' />
                     </NavbarBrand>
                 </NavbarContent>
 
@@ -127,12 +127,6 @@ function NavBar() {
                             Shop
                         </Link>
                     </NavbarItem>
-                    <NavbarItem>
-                        <Link color="foreground" href="#">
-                            Integrations
-                        </Link>
-                    </NavbarItem>
-
                 </NavbarContent>
 
                 <NavbarMenu>
