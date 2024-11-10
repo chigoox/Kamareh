@@ -8,6 +8,7 @@ import EmblaCarousel from "./Componets/HomePage/Carousel";
 import FeaturedCategory from "./Componets/HomePage/FeaturedCategory";
 import Categories from "./Componets/HomePage/Categories";
 import CategoryTabs from "./Componets/HomePage/CategoryTabs";
+import Products from "./Componets/HomePage/Products";
 //import ProductView from '../Support/ProductView';
 
 function Home() {
