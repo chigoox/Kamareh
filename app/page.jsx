@@ -77,6 +77,12 @@ function Home() {
 
       </div>
 
+      <div className="h-auto">
+        <CategoryTabs />
+        <Products />
+
+      </div>
+
     </div>
   )
 }

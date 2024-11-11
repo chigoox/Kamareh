@@ -9,11 +9,11 @@ import { Mail, ShirtIcon } from "lucide-react";
 function CategoryTabs() {
     return (
         <div className="flex w-full flex-col ">
-            <Tabs radius='none' size='lg' aria-label="Options" color="white" className='rounded-none bg-black border-none' variant="bordered">
+            <Tabs radius='none' size='lg' aria-label="Options" color="white" className='rounded-none  border-none' variant="light">
                 <Tab
                     key="Shirt"
                     title={
-                        <div className="flex items-center  space-x-2">
+                        <div className="flex items-center border  space-x-2">
                             <ShirtIcon size={24} />
                             <span>Shirt</span>
                         </div>
