@@ -4,7 +4,7 @@ import { useCartContext } from '@/StateManager/CartContext'
 import useFilterEmptyCategory from '@/app/Hooks/useFilterCategory'
 import useWindowDimensions from '@/app/Hooks/useGetWindowDeimentions'
 import useScrollPosition from '@/app/Hooks/useScrollPosition'
-import { Avatar, Image, Link, NavbarMenu, NavbarMenuItem, NavbarMenuToggle, Tab, Tabs } from '@nextui-org/react'
+import { Avatar, Image, NavbarMenu, NavbarMenuItem, NavbarMenuToggle, Tab, Tabs } from '@nextui-org/react'
 import { MenuIcon, ShoppingBag, ShoppingCartIcon, User2Icon } from 'lucide-react'
 import { Bebas_Neue, Jost } from 'next/font/google'
 import { usePathname, useRouter } from 'next/navigation'
@@ -16,6 +16,7 @@ import { NavigationEvents } from "../NavigationEvents"
 import Cart from './Cart'
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Button, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu } from "@nextui-org/react";
 import { AiFillHome, AiOutlineShoppingCart } from 'react-icons/ai'
+import Link from 'next/link'
 
 
 const alexFont = Bebas_Neue({
@@ -141,7 +142,10 @@ function NavBar() {
                                     "foreground"
                                 }
                                 className="w-full text-xl font-bold"
-                                href="#"
+                                href={{
+                                    pathname: `/Shop`,
+                                    query: { name: item }
+                                }}
                                 size="lg"
                             >
                                 {item}
