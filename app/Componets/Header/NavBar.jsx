@@ -109,7 +109,7 @@ function NavBar() {
             </Suspense>
 
 
-            <Navbar className='bg-white' onMenuOpenChange={setIsMenuOpen}>
+            <Navbar disableAnimation={true} className='bg-white' isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
                 <NavbarContent>
                     <NavbarMenuToggle
 
@@ -138,6 +138,7 @@ function NavBar() {
                     {menuItems.map((item, index) => (
                         <NavbarMenuItem key={`${item}-${index}`}>
                             <Link
+                                onClick={() => { setIsMenuOpen(false); console.log(isMenuOpen)}}
                                 color={
                                     "foreground"
                                 }

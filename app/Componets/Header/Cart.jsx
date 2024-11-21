@@ -103,7 +103,7 @@ function Cart({ showCart, setShowCart }) {
             style={{ touchAction: "none" }}
             drag='x'
             dragConstraints={{ left: 0, right: 0, }}
-            className={`fixed z-[999] border-l border-dashed border-opacity-50 border-gray-500   md:top-0 top-0 trans  right-0 ${showCart ? 'w-[50vw] md:w-[25vw] p-2' : 'w-[0] P-0 overflow-hidden'} h-[100vh] bg-gray-100 text-black bg-opacity-50`}>
+            className={`fixed z-[999] border-l border-dashed border-opacity-50 border-gray-500   md:top-0 top-0 trans  right-0 ${showCart ? 'w-[50vw] md:w-[25vw] p-2' : 'w-[0] P-0 overflow-hidden'} h-[100vh] bg-white text-black `}>
             {isLoading && <Loading />}
             {(getShippingWindow && showCart) && <div className="absolute w-auto z-50  -left-40 ">
                 <ShippinInfo defualtData={shippingData} user={user} forCheckOut={getShippingInfo} />

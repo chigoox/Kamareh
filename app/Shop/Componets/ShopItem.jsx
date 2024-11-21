@@ -39,8 +39,8 @@ function ShopItem({ shopItems, location = 'HotTools', onShopPage }) {
             />
             <div className='group'>
                 <Link className='center-col ' href={`/Shop/${location}/${name?.replace(/\s/g, '')}`}>
-                    <Skeleton isLoaded={productsLoaded} className='w-auto h-auto rounded-full bg-gray-400 '>
-                        <Card className={'h-40 w-40 border-4 relative rounded-full overflow-hidden bg-black'}>
+                    <Skeleton isLoaded={productsLoaded} className='w-auto h-auto rounded-lg bg-gray-400 '>
+                        <Card className={'h-40 w-40 border-4 relative rounded-lg overflow-hidden bg-black'}>
                             <Image width={1920} height={1080} quality={100} src={images[0]} className=' m-auto h-full w-full object-cover' alt="" />
                             <div className={'font.className absolute bg-black trans bg-opacity-50 hover:bg-opacity-0 h-full w-full center'}>
                                 <h1 className='md:text-lg group-hover:bg-black text-white  w-60  p-1  text-center max-h-16 overflow-hidden md:max-h-20'>{name.substr(0, 50)}{name.length > 50 ? '...' : ''}</h1>
