@@ -133,14 +133,14 @@ function NavBar() {
                     </NavbarItem>
                 </NavbarContent>
 
-                <NavbarMenu>
+                <NavbarMenu className='py-20 w-2/3 bg-white'>
                     {menuItems.map((item, index) => (
                         <NavbarMenuItem key={`${item}-${index}`}>
                             <Link
                                 color={
-                                    index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
+                                    "foreground"
                                 }
-                                className="w-full"
+                                className="w-full text-xl font-bold"
                                 href="#"
                                 size="lg"
                             >
