@@ -5,7 +5,7 @@ import useFilterEmptyCategory from '@/app/Hooks/useFilterCategory'
 import useWindowDimensions from '@/app/Hooks/useGetWindowDeimentions'
 import useScrollPosition from '@/app/Hooks/useScrollPosition'
 import { Avatar, Image, Link, NavbarMenu, NavbarMenuItem, NavbarMenuToggle, Tab, Tabs } from '@nextui-org/react'
-import { MenuIcon, ShoppingBag, User2Icon } from 'lucide-react'
+import { MenuIcon, ShoppingBag, ShoppingCartIcon, User2Icon } from 'lucide-react'
 import { Bebas_Neue, Jost } from 'next/font/google'
 import { usePathname, useRouter } from 'next/navigation'
 import { Suspense, useEffect, useState } from 'react'
@@ -90,8 +90,11 @@ function NavBar() {
         )
     }
     const menuItems = [
-        "Home",
-        "Shop",
+        "New Arrivals",
+        "Tops",
+        'Skirts',
+        'Pants',
+        'Jackets'
 
     ];
 
@@ -117,20 +120,16 @@ function NavBar() {
 
                 <NavbarContent>
                     <NavbarBrand>
-                        <Image className='h-20 object-cover' src='/Logo.png' />
+                        <Image className='h-20 object-cover relative right-10' src='/Logo.png' />
                     </NavbarBrand>
                 </NavbarContent>
 
-                <NavbarContent className="hidden sm:flex gap-4" justify="center">
+                <NavbarContent className=" sm:flex gap-4" justify="center">
                     <NavbarItem>
-                        <Link color="foreground" href="#">
-                            Home
-                        </Link>
-                    </NavbarItem>
-                    <NavbarItem isActive>
-                        <Link href="#" aria-current="page">
-                            Shop
-                        </Link>
+                        <Button onPress={() => { setShowCart(true) }} className='p-0 bg-opacity-0 min-w-0'>
+                            <ShoppingCartIcon />
+
+                        </Button>
                     </NavbarItem>
                 </NavbarContent>
 
