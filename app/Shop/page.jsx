@@ -1,10 +1,11 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation';
 import { DivideSquare, SlidersIcon } from 'lucide-react';
 import { Button } from '@nextui-org/react';
 import ShopItem from './Componets/ShopItem';
 import { Grid } from 'antd';
+import { SortProductsComponet } from './Componets/SortProducts';
 const page = () => {
 
 
@@ -13,16 +14,20 @@ const page = () => {
     const pageName = searchParams.get('name')
 
     const mocItems = [1, 1, 1, 1, 1, 1]
+    const sortList = ['A-Z', 'Z-A', '$-$$$', '$$$-$', 'Newest', 'Most Popular']
+    const [showSortList, setShowSortList] = useState(false)
+
 
     return (
         <div className='p-2'>
             <h1 className='text-3xl font-bold mt-10 p-2'>{pageName}</h1>
             <br />
             <br />
-            <Button className='p-2 bg-opacity-0  gap-2 '>
+            <Button onPress={() => setShowSortList(!showSortList)} className='p-2 bg-opacity-0  gap-2 '>
                 <SlidersIcon />
                 <p>filter & sort</p>
             </Button>
+            <SortProductsComponet setVisable={setShowSortList} visable={showSortList} />
             <br />
             <br />
             <div className='grid grid-cols-2 md:grid-cols-3 '>

@@ -1,4 +1,3 @@
-
 import Toastify from 'toastify-js'
 
 export const isDev = () => {
@@ -89,3 +88,4 @@ export const createArray = (length) => {
 
     return newArray
 }
+
