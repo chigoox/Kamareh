@@ -93,9 +93,7 @@ function NavBar() {
     const menuItems = [
         "New Arrivals",
         "Tops",
-        'Skirts',
-        'Pants',
-        'Jackets'
+
 
     ];
 

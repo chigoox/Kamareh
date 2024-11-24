@@ -9,6 +9,8 @@ import ProductView from './ProductView';
 const font = Grandstander({ subsets: ['latin'], weight: ['400'] })
 const font2 = Dosis({ subsets: ['latin'], weight: ['400'] })
 export const MONEYFONT = font2
+import { FaShoppingCart } from "react-icons/fa";
+
 
 function ShopItem({ shopItems, location = 'HotTools', onShopPage }) {
     const { name, images, metadata } = shopItems ? shopItems : { name: 'Item', images: [] }
@@ -32,46 +34,40 @@ function ShopItem({ shopItems, location = 'HotTools', onShopPage }) {
         awaitLoading()
     }, [name])
     return (
-        <div className=' fadeInZoomx2 flex-shrink-0 m-auto h-64 border   w-40 md:h-64  md:w-64  my-2 shadow-sm shadow-black-800   border-[#474747] hover:border-white hover:font-extrabold    relative   overflow-hidden'>
+        <div className=' fadeInZoomx2 flex-shrink-0 m-auto h-96    w-50 md:h-64  md:w-64  my-2 shadow-sm shadow-black-800   border-[#474747] hover:border-white hover:font-extrabold    relative   overflow-hidden'>
             <ProductView
                 showShopView={ShowQuickView}
                 setShowShopView={setShowQuickView}
             />
-            <div className='group'>
-                <Link className='center-col ' href={`/Shop/${location}/${name?.replace(/\s/g, '')}`}>
+            <div className='group '>
+                <Link className='center-col relative' href={`/Shop/${location}/${name?.replace(/\s/g, '')}`}>
                     <Skeleton isLoaded={productsLoaded} className='w-auto h-auto rounded-lg bg-gray-400 '>
-                        <Card className={'h-40 w-40 border-4 relative rounded-lg overflow-hidden bg-black'}>
-                            <Image width={1920} height={1080} quality={100} src={images[0]} className=' m-auto h-full w-full object-cover' alt="" />
-                            <div className={'font.className absolute bg-black trans bg-opacity-50 hover:bg-opacity-0 h-full w-full center'}>
-                                <h1 className='md:text-lg group-hover:bg-black text-white  w-60  p-1  text-center max-h-16 overflow-hidden md:max-h-20'>{name.substr(0, 50)}{name.length > 50 ? '...' : ''}</h1>
-                            </div>
+                        <Card className={'h-72 w-50  relative rounded-lg overflow-hidden bg-black'}>
+                            <Image width={1920} height={1080} quality={100} src={images[0] || 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=420&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} className=' m-auto h-full w-full object-cover' alt="" />
+
                         </Card>
                     </Skeleton>
-                    <div className='h-[30%] md:h-[20%] bg-opacity-75  bottom-0  w-full flex items-center flex-col p-2'>
-                        <div className=' w-full center gap-1'>
-                            <span className='font-extralight text-sm'>$</span><span className='text-2xl font-semibold'>
-                                <Skeleton isLoaded={productsLoaded} className='w-auto h-auto bg-gray-400 '>
-                                    <h1 className={font2.className}><Skeleton isLoaded={price} className='rounded'>{price}</Skeleton></h1>
-
-                                </Skeleton>
-                            </span>
-                        </div>
-
-                    </div>
+                    <Button onPress={(event) => { toggleQuickView(event) }} className='w-12 h-12 min-w-0 absolute bottom-2 right-2 rounded-full m-auto p-3 bg-black text-white center font-bold block md:hidden md:group-hover:block   hover:bg-black-800 '>
+                        <FaShoppingCart size={32} />
+                    </Button>
                 </Link>
-                <Button onPress={(event) => { toggleQuickView(event) }} className='w-fit m-auto  font-bold block md:hidden md:group-hover:block   hover:bg-black-800 '>
-                    Add to cart
-                </Button>
+                <div className='   bottom-0  w-full flex items-center flex-col p-2'>
+                    <div className={'font.className absolute trans bg-opacity-50 hover:bg-opacity-0 h-full w-full center'}>
+                        <h1 className='md:text-lg group-hover:bg-black text-white  w-60  p-1  text-center max-h-16 overflow-hidden md:max-h-20'>{(name.substr(0, 50) + name.length > 50 ? '...' : '') || 'name'}</h1>
+                    </div>
+                    <div className=' w-full center gap-1'>
+                        <span className='font-extralight text-sm'>$</span><span className='text-2xl font-semibold'>
+                            <Skeleton isLoaded={productsLoaded} className='w-auto h-auto bg-gray-400 '>
+                                <h1 className={font2.className}><Skeleton isLoaded={price} className='rounded'>{price}</Skeleton></h1>
 
-                {/*  <div className='w-28 h-8 absolute rounded-full flex justify-end items-center p-2 top-[70%] right-4 bg-black bg-opacity-75'>
-                {stars.map((star) => {
-                    return (
-                        <AiFillStar size={14} color='yellow' />
-                    )
-                })}
+                            </Skeleton>
+                        </span>
+                    </div>
+
+                </div>
 
 
-            </div> */}
+
 
             </div>
 
