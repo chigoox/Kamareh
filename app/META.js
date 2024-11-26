@@ -10,7 +10,7 @@ export const siteEmail = 'Kamareh'
 
 export const NavBarVideoURL = 'hLDQ88vAhIs'
 export const orderNumberPrefix = 'Kam'
-export const category = ['Drinks', 'Candy', 'Snacks', 'Gum', 'Mints', 'Tobacco', 'Beauty', 'Others']
+export const category = ['Tops', 'Skirts', 'Jackets']
 
 
 
