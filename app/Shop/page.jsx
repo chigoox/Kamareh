@@ -17,6 +17,35 @@ const page = () => {
     const sortList = ['A-Z', 'Z-A', '$-$$$', '$$$-$', 'Newest', 'Most Popular']
     const [showSortList, setShowSortList] = useState(false)
 
+    const [PRODUCTS, setPRODUCTS] = useState([])
+    const [sortBy, setSortBy] = useState('none')
+    const [Search, setSearch] = useState('')
+    const [category, setCategory] = useState('All')
+
+
+
+
+
+    useEffect(() => {
+        const getData = async () => {
+            const STRIPE_PRODUCTS = await fetchAllProducts(null, 108)
+            
+
+            const products = [...STRIPE_PRODUCTS]
+            setPRODUCTS(Object.values(
+                filterObject(products, (v) => {
+                    return (Object.keys(v.metadata).length > 0) && (v.active) && (v.images.length > 0)
+                })
+            ))
+
+        }
+
+        getData()
+
+
+
+    }, [])
+
 
     return (
         <div className='p-2'>
@@ -31,7 +60,7 @@ const page = () => {
             <br />
             <br />
             <div className='grid grid-cols-2 md:grid-cols-3 '>
-                {mocItems.map((item) => {
+                {PRODUCTS.map((item) => {
 
 
                     return (<ShopItem />)
