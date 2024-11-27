@@ -120,7 +120,7 @@ const Product = ({ product, forThis, category }) => {
 
 
     return (
-        <main className="flex overflow-hidden min-h-screen bg-black-800 flex-col ">
+        <main className="flex overflow-hidden min-h-screen  flex-col ">
 
             <div className='relative top-8 lg:w-3/4'>
 
@@ -145,7 +145,7 @@ const Product = ({ product, forThis, category }) => {
                                 onChange={({ target }) => { console.log(target.value); setItemToCheckOut(prev => ({ ...prev, StockQty: target.value.split(',', 4)[3], price: Number(target.value.split(',', 3)[2]?.replace('$', '')), priceID: target.value.split(',', 2)[0], variant: target.value.split(',', 2)[1] })) }}
                                 labelPlacement={'outside'}
                                 label="Select Variant"
-                                className="max-w-xs my-8 text-black"
+                                className="max-w-xs my-8"
                             >
                                 {variants.map((variant) => {
                                     return (
@@ -160,12 +160,12 @@ const Product = ({ product, forThis, category }) => {
                         <div className='mt-2 '>
                             <div className=' gap-4 items-center  flex md:flex-row flex-col'>
                                 <ItemQTYButton state={itemToCheckOut} setState={setItemToCheckOut} />
-                                <Button onClick={addToCart} className='h-12 rounded-md w-48 hover:bg-blue-700 hover:text-white bg-gray-500 mb-2'>ADD TO CART</Button>
+                                <Button onClick={addToCart} className='h-12 rounded-md w-48 hover:bg-blue-700  bg-gray-500 mb-2'>ADD TO CART</Button>
                             </div>
                         </div>
 
                         <div className={font1.className}>
-                            <h1 className='text-2xl font-extralight text-white bg-black-800'>Description</h1>
+                            <h1 className='text-2xl font-extralight'>Description</h1>
                             <Skeleton className='w-fit' isLoaded={desc}>
                                 <h1 className=''>{desc}</h1>
                                 <h1>{feats}</h1>
