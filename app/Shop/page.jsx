@@ -65,7 +65,7 @@ console.log(PRODUCTS)
                 {PRODUCTS.map((item) => {
 
 
-                    return (<ShopItem />)
+                    return (<ShopItem shopItems={item} location={pageName} />)
                 })}
             </div>
 
