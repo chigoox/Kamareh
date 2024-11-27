@@ -17,7 +17,7 @@ import Cart from './Cart'
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Button, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu } from "@nextui-org/react";
 import { AiFillHome, AiOutlineShoppingCart } from 'react-icons/ai'
 import Link from 'next/link'
-
+import { IoMenu } from "react-icons/io5";
 
 const alexFont = Bebas_Neue({
     weight: '400',
@@ -110,7 +110,7 @@ function NavBar() {
             <Navbar disableAnimation={true} className='bg-white' isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
                 <NavbarContent>
                     <NavbarMenuToggle
-
+icon={<IoMenu />}
                         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                         className="sm:hidden text-black"
                     />
