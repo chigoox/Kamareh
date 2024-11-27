@@ -95,7 +95,7 @@ const Product = ({ product, forThis, category }) => {
         const services = ['After Pay', 'Klarna', 'Affirm']
         return (
             <div className={'rounded-xl  w-fit center-col m-auto mt-2 gap-2 relative p-2 overflow-hidden'} >
-                <div className='font-thin text-sm md:text-base'>or 4 interest-free payments of <span className=' font-normal'><Skeleton isLoaded={price} className='w-fit  relative top-[.40rem] inline-block'>${price / 4}</Skeleton ></span> with:</div>
+                <div className='font-thin text-sm md:text-base text-black'>or 4 interest-free payments of <span className=' font-normal'><Skeleton isLoaded={price} className='w-fit  relative top-[.40rem] inline-block'>${price / 4}</Skeleton ></span> with:</div>
 
                 <div className='center gap-2 mt-1 bg-white -200 p-2 rounded-full'>
                     {services.map(service => (<Skeleton isLoaded={price} key={service} className='w-20 h-8 center  font-bold text-gray-500 text-sm'>
@@ -133,7 +133,7 @@ const Product = ({ product, forThis, category }) => {
 
                     <div className='h-fit md:w-1/2 p-2 pt-8'>
                         <Skeleton isLoaded={name} className={`${name ? 'h-auto' : 'h-8'} rounded py-2`}>
-                            <h1 className='text-3xl md:text-6xl font-bold'>{name}</h1>
+                            <h1 className='text-3xl md:text-6xl font-bold text-black'>{name}</h1>
                         </Skeleton>
                         <span className='font-thin'>from</span>
                         <Skeleton isLoaded={price} className='w-fit flex'>
