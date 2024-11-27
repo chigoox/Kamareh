@@ -110,7 +110,7 @@ function NavBar() {
             <Navbar disableAnimation={true} className='bg-white' isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
                 <NavbarContent>
                     <NavbarMenuToggle
-icon={<IoMenu />}
+                        icon={<IoMenu size={32} />}
                         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                         className="sm:hidden text-black"
                     />
