@@ -57,7 +57,7 @@ const Product = ({ product, forThis, category }) => {
 
     }
 
-    console.log(thisProduct)
+    
 
     const filteredPrice = thisProduct?.metadata?.price?.replace('$', '')
     const price = Number(filteredPrice ? filteredPrice : false)
@@ -137,7 +137,7 @@ const Product = ({ product, forThis, category }) => {
                         </Skeleton>
                         <span className='font-thin'>from</span>
                         <Skeleton isLoaded={price} className='w-fit flex'>
-                            <span className=' font-light text-2xl'>${price}</span>
+                            <span className=' font-light text-black text-2xl'>${price}</span>
                         </Skeleton>
                         <PayOptions price={price} />
                         <div className='center flex-wrap md:w-3/4 m-auto mt-2 gap-2'>
