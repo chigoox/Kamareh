@@ -24,7 +24,7 @@ const page = () => {
     const [category, setCategory] = useState('All')
 
 
-
+console.log(PRODUCTS)
 
 
     useEffect(() => {
