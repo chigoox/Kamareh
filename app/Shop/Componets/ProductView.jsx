@@ -64,7 +64,7 @@ function ProductView({ showShopView, setShowShopView }) {
 
     return (
         < Modal isOpen={showShopView} backdrop={'blur'} onOpenChange={() => { setShowShopView(false) }
-        } placement='auto' scrollBehavior='inside' className={`h-auto min-w-full text-white w-auto overflow-x-hidden md:px-20 lg:px-40 xl:px-32 py-4    ${{
+        } placement='auto' scrollBehavior='inside' className={`h-auto min-w-full  w-auto overflow-x-hidden md:px-20 lg:px-40 xl:px-32 py-4    ${{
             backdrop: "bg-black bg-opacity-100"
         }}`}>
             <ModalContent>
@@ -83,7 +83,7 @@ function ProductView({ showShopView, setShowShopView }) {
                                     <PayOptions price={price} />
                                     <div className=' items-center  flex  flex-col'>
                                         {<ItemQTYButton state={itemToCheckOut} setState={setItemToCheckOut} />}
-                                        <Button onClick={addToCart} className='h-12 rounded-md w-32 bg-blue-700 hover:blue-400 text-white font-bold mb-2'>ADD TO CART</Button>
+                                        <Button onClick={addToCart} className='h-12 rounded-md w-32 bg-blue-700 hover:blue-400 font-bold mb-2'>ADD TO CART</Button>
                                     </div>
                                 </div>
                             </div>
