@@ -122,7 +122,7 @@ function ProductView({ showShopView, setShowShopView }) {
 
 
                                         <div className={``}>
-                                            <h1 className='text-2xl font-extralight text-white bg-black-800'>Description</h1>
+                                            <h1 className='text-2xl font-extralight text-white'>Description</h1>
                                             <Skeleton className='w-fit' isLoaded={desc}>
                                                 <h1>{desc}</h1>
                                             </Skeleton>
