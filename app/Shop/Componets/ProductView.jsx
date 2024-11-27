@@ -64,7 +64,7 @@ function ProductView({ showShopView, setShowShopView }) {
 
     return (
         < Modal isOpen={showShopView} backdrop={'blur'} onOpenChange={() => { setShowShopView(false) }
-        } placement='auto' scrollBehavior='inside' className={`h-auto min-w-full text-white w-auto overflow-x-hidden md:px-20 lg:px-40 xl:px-32 py-4 bg-black-800   ${{
+        } placement='auto' scrollBehavior='inside' className={`h-auto min-w-full text-white w-auto overflow-x-hidden md:px-20 lg:px-40 xl:px-32 py-4    ${{
             backdrop: "bg-black bg-opacity-100"
         }}`}>
             <ModalContent>
