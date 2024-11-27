@@ -7,6 +7,7 @@ import ShopItem from './Componets/ShopItem';
 import { Grid } from 'antd';
 import { SortProductsComponet } from './Componets/SortProducts';
 import { fetchAllProducts } from '../myCodes/Stripe';
+import {filterObject } from '../myCodes/Util';
 const page = () => {
 
 
