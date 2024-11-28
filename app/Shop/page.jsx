@@ -65,7 +65,7 @@ console.log(PRODUCTS)
                 {PRODUCTS.map((item) => {
 
 
-                    return (<ShopItem shopItems={item} location={pageName} />)
+                    return (<ShopItem shopItems={item} location={item.metadata.category} />)
                 })}
             </div>
 
