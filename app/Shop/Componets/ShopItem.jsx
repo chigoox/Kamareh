@@ -42,7 +42,7 @@ function ShopItem({ shopItems, location = 'HotTools', onShopPage }) {
             <div className='group '>
                 <Link className='center-col relative' href={`/Shop/${location}/${name?.replace(/\s/g, '')}`}>
                     <Skeleton isLoaded={productsLoaded} className='w-auto h-auto rounded-lg '>
-                        <Card className={'h-72 w-40  relative rounded-lg overflow-hidden bg-black'}>
+                        <Card className={'h-72 w-40  relative rounded-lg overflow-hidden bg-white'}>
                             <Image width={1920} height={1080} quality={100} src={images[0] || 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=420&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} className=' m-auto h-full w-full object-cover' alt="" />
 
                         </Card>
