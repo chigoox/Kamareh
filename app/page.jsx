@@ -1,4 +1,5 @@
 
+
 import { Button, Card, Image, Input, Link } from "@nextui-org/react";
 import ProductsList from "./Shop/Componets/ProductsList";
 import { createArray, getRand } from "./myCodes/Util";
@@ -18,6 +19,8 @@ function Home() {
       <EmblaCarousel
         noArrow={true}
         vid={'videos/MOV_3270.MOV'}
+        img1={'Images/guy (10).jpg'}
+        img2={'Images/guy (9).jpg'}
 
       />
 
