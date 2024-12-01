@@ -42,8 +42,9 @@ export const EmblaCarousel = ({ vid, img1, img2, img3, img4, rounded, noArrow, d
         <div className="embla relative z-0 h-screen  shadow-md shadow-black-800 ">
             <div className={`embla__viewport  bg-black-800 zoom h-full ${rounded ? 'h-[6rem]' : 'lg:h-[50rem]  h-[30rem]'}  overflow -hidden`} ref={emblaRef}>
                 <div className="embla__container h-screen  w-[100vw] relative   gap-4">
+                   
+                    {img1 && <Slide rounded={rounded} img={img1} text={text} dim={dim} noZoom={noZoom} />} 
                     {vid && <SlideVideo vid={vid} />}
-                    {img1 && <Slide rounded={rounded} img={img1} text={text} dim={dim} noZoom={noZoom} />}
                     {img2 && <Slide rounded={rounded} img={img2} text={text2} dim={dim} noZoom={noZoom} />}
                     {img3 && <Slide rounded={rounded} img={img3} text={text3} dim={dim} noZoom={noZoom} />}
                     {img4 && <Slide rounded={rounded} img={img4} text={text4} dim={dim} noZoom={noZoom} />}
