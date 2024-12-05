@@ -19,14 +19,14 @@ function AboutUs() {
         category of fashion. Whether you’re drawn to the edge of streetwear or the sophistication of classical styles,
         Kamareh offers a diverse range of pieces that allow you to express yourself freely, without compromise.        
       </div>
-      <Image className={`w-full h-24`} src={'Images/guy (2).jpg'} alt='picture'/>
+      <Image className={`w-full h-24`} src={'Images/guy (3).jpg'} alt='picture'/>
       <div className={``}>
         At Kamareh, we believe that clothing is a canvas for personal expression. Our collections are meticulously crafted
         to blend comfort, quality, and versatility, empowering individuals to mix and match, experiment, and create their own
         signature look. We are proud to provide fashion-forward designs that cater to those who embrace the freedom to define
         their own style—whether it’s sleek, casual, bold, or refined. 
       </div>
-<Image className={`w-full h-96`} src={'Images/guy (2).jpg'} alt='picture'/>
+<Image className={`w-full h-96`} src={'Images/guy (6).jpg'} alt='picture'/>
       <div className={``}>
         Kamareh is more than just a brand; it’s a movement for those who celebrate the beauty of diversity in fashion
         . For those who don’t follow trends but set them. We’re here for the people who see fashion as limitless,
