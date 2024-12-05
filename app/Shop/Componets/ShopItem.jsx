@@ -1,13 +1,13 @@
 'use client'
 import { getRand } from '@/app/myCodes/Util';
 import { Button, Card, Skeleton } from "@nextui-org/react";
-import { Dosis, Grandstander } from 'next/font/google';
+import { Dosis, Grandstander, Courier_Prime } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import ProductView from './ProductView';
-const font = Grandstander({ subsets: ['latin'], weight: ['400'] })
-const font2 = Dosis({ subsets: ['latin'], weight: ['400'] })
+const font = Courier_Prime({ subsets: ['latin'], weight: ['400'] })
+const font2 = Courier_Prime({ subsets: ['latin'], weight: ['400'] })
 export const MONEYFONT = font2
 import { FaShoppingCart } from "react-icons/fa";
 
