@@ -1,4 +1,4 @@
-import { Button, Card, Image, Input, Link, Image } from "@nextui-org/react";
+import { Button, Card, Image, Input, Link } from "@nextui-org/react";
 
 
 function AboutUs() {
