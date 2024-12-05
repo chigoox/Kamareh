@@ -141,10 +141,10 @@ function NavBar() {
                                 color={
                                     "foreground"
                                 }
-                                className="w-full text-xl font-bold"
+                                className="w-full text-xl "
                                 href={{
                                     pathname: (item != ('HOME') && item != ('ABOUT US')) ? `/Shop` : item == ('HOME') ? `/` : `/AboutUs`  ,
-                                    query: { name: item }
+                                    query: (item != ('HOME') && item != ('ABOUT US'))  ? { name: item } : null
                                 }}
                                 size="lg"
                             >
