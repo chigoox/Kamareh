@@ -1,5 +1,5 @@
 import { CartWrapper } from '@/StateManager/CartContext'
-import { Bebas_Neue, Jost, courier_prime } from 'next/font/google'
+import { Bebas_Neue, Jost, Courier_Prime } from 'next/font/google'
 import NavBar from './Componets/Header/NavBar'
 import { siteName, siteTag } from './META'
 import { UIProvider } from './UIProvider'
@@ -8,7 +8,7 @@ import './globals.css'
 
 const jost = Jost({ subsets: ['latin'] })
 
-const courier_prime = courier_prime({
+const courier_prime = Courier_Prime({
     weight: '400',
     subsets: ['latin'],
 })
