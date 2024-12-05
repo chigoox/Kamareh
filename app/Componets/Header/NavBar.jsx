@@ -91,8 +91,9 @@ function NavBar() {
         )
     }
     const menuItems = [
+        "Home",
         "New Arrivals",
-        "Tops",
+        "About Us"
 
 
     ];
@@ -142,7 +143,7 @@ function NavBar() {
                                 }
                                 className="w-full text-xl font-bold"
                                 href={{
-                                    pathname: `/Shop`,
+                                    pathname: (item != ('Home') || item != ('About Us')) ? `/Shop` : item == ('Home') ? `/` : `/About Us`  ,
                                     query: { name: item }
                                 }}
                                 size="lg"
