@@ -4,6 +4,7 @@ import { Button, Card, Image, Input, Link } from "@nextui-org/react";
 function AboutUs() {
   return (
     <div className='bg-white hidescroll  h-screen   relative overflow-x-hidden'>
+      <Image className={`w-full h-96 rounded-none`} src={'Images/guy (8).jpg'} alt='picture'/>
     <div className={`center-col w-full md:w-1/3 p-2 m-auto`}>
 
        <div className={``}>
