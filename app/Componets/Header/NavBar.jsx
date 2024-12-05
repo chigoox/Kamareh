@@ -91,9 +91,9 @@ function NavBar() {
         )
     }
     const menuItems = [
-        "Home",
-        "New Arrivals",
-        "About Us"
+        "HOME",
+        "NEW ARRIVALS",
+        "ABOUT US"
 
 
     ];
@@ -143,7 +143,7 @@ function NavBar() {
                                 }
                                 className="w-full text-xl font-bold"
                                 href={{
-                                    pathname: (item != ('Home') || item != ('About Us')) ? `/Shop` : item == ('Home') ? `/` : `/About Us`  ,
+                                    pathname: (item != ('HOME') && item != ('ABOUT US')) ? `/Shop` : item == ('HOME') ? `/` : `/ABOUT US`  ,
                                     query: { name: item }
                                 }}
                                 size="lg"
