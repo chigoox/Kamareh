@@ -143,7 +143,7 @@ function NavBar() {
                                 }
                                 className="w-full text-xl font-bold"
                                 href={{
-                                    pathname: (item != ('HOME') && item != ('ABOUT US')) ? `/Shop` : item == ('HOME') ? `/` : `/ABOUT US`  ,
+                                    pathname: (item != ('HOME') && item != ('ABOUT US')) ? `/Shop` : item == ('HOME') ? `/` : `/AboutUs`  ,
                                     query: { name: item }
                                 }}
                                 size="lg"
