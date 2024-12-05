@@ -1,10 +1,10 @@
-import { Button, Card, Image, Input, Link } from "@nextui-org/react";
+import { Button, Card, Image, Input, Link, Image } from "@nextui-org/react";
 
 
 function AboutUs() {
   return (
     <div className='bg-white hidescroll  h-screen   relative overflow-x-hidden'>
-    <div className={`center-col p-20`}>
+    <div className={`center-col w-full md:w-1/3 p-2`}>
 
        <div className={``}>
        About Us Welcome to Kamareh — a brand that celebrates individuality, versatility, and timeless style.
@@ -12,6 +12,7 @@ function AboutUs() {
        The name “Kamareh” is a blend of Mameh’s first and last name, symbolizing the seamless fusion of personal
        identity and creative expression. 
      </div>
+      <Image src={'Images/guy (02).jpg'} alt='picture'/>
       <div className={``}>
        Kamareh was born out of Mameh’s desire to offer a clothing line that transcends traditional boundaries.
         Inspired by her own fluid sense of style, Kamareh is designed for those who refuse to be boxed into one
