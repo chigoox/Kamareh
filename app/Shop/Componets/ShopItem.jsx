@@ -34,7 +34,7 @@ function ShopItem({ shopItems, location = 'HotTools', onShopPage }) {
         awaitLoading()
     }, [name])
     return (
-        <div className=' fadeInZoom flex-shrink-0 m-auto h-96    w-40 md:h-64  md:w-64  my-2  shadow-black-800   border-[#474747]   relative   overflow-hidden'>
+        <div className=' fadeInZoom flex-shrink-0 m-auto h-96    w-40 md:h-64  md:w-64  my-2     border-[#474747]   relative   overflow-hidden'>
             <ProductView
                 showShopView={ShowQuickView}
                 setShowShopView={setShowQuickView}
