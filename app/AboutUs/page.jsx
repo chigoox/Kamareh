@@ -4,7 +4,9 @@ import { Button, Card, Image, Input, Link } from "@nextui-org/react";
 function AboutUs() {
   return (
     <div className='bg-white hidescroll  h-screen   relative overflow-x-hidden'>
-     <div className={``}>
+    <div className={`center-col p-20`}>
+
+       <div className={``}>
        About Us Welcome to Kamareh — a brand that celebrates individuality, versatility, and timeless style.
        Founded in 2024 by Mameh Kamara, Kamareh is a reflection of its founder’s unique approach to fashion.
        The name “Kamareh” is a blend of Mameh’s first and last name, symbolizing the seamless fusion of personal
@@ -28,6 +30,8 @@ function AboutUs() {
         . For those who don’t follow trends but set them. We’re here for the people who see fashion as limitless,
         and we’re excited to help you create your own unique statement.
       </div>
+      
+    </div>
     </div>
   )
 }
