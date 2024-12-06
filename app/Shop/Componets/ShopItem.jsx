@@ -54,7 +54,7 @@ function ShopItem({ shopItems, location = 'HotTools', onShopPage }) {
                 </Link>
                 <div className='   bottom-0  w-full flex items-center flex-col p-2'>
                     <div className={'font.className border-4  trans overflow-hidden   h-12 w-full'}>
-                        <h1 className='md:text-lg text-black  w-24  h-12'>test{name.substr(0, 50) + name.length > 50 ? '...' : ''}</h1>
+                        <h1 className='md:text-lg text-black  w-24  h-12'>{name}</h1>
                     </div>
                     <div className=' w-full center gap-1'>
                         <span className='font-extralight text-sm'>$</span><span className='text-2xl font-semibold'>
