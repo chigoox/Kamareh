@@ -52,8 +52,8 @@ function ShopItem({ shopItems, location = 'HotTools', onShopPage }) {
                     </Button>
                 </Link>
                 <div className='   bottom-0  w-full flex items-center flex-col p-2'>
-                    <div className={'font.className border-4  trans bg-opacity-50 hover:bg-opacity-0 h-full w-full center'}>
-                        <h1 className='md:text-lg text-black  w-60  p-1  text-center max-h-16 overflow-hidden md:max-h-20'>{name.substr(0, 50) + name.length > 50 ? '...' : ''}</h1>
+                    <div className={'font.className border-4  trans   h-full w-full center'}>
+                        <h1 className='md:text-lg text-black  w-60  text-center max-h-20 overflow-hidden md:max-h-20'>{name.substr(0, 50) + name.length > 50 ? '...' : ''}</h1>
                     </div>
                     <div className=' w-full center gap-1'>
                         <span className='font-extralight text-sm'>$</span><span className='text-2xl font-semibold'>
