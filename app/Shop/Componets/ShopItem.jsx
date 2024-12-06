@@ -56,7 +56,7 @@ function ShopItem({ shopItems, location = 'HotTools', onShopPage }) {
                     <div className={'font.className border-4  trans overflow-hidden   h-12 w-full'}>
                         <h1 className='md:text-lg text-black  w-24  h-12'>{name}</h1>
                     </div>
-                    <div className=' w-full center gap-1'>
+                    <div className=' w-full flex'>
                         <span className='font-extralight text-sm'>$</span><span className='text-2xl font-semibold'>
                             <Skeleton isLoaded={productsLoaded} className='w-auto h-auto bg-gray-400 '>
                                 <h1 className={font2.className}><Skeleton isLoaded={price} className='rounded'>{price}</Skeleton></h1>
