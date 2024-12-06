@@ -5,7 +5,7 @@ function AboutUs() {
   return (
     <div className='bg-white hidescroll  h-screen   relative overflow-x-hidden'>
       <Image className={`w-full h-96 mb-24 rounded-none object-cover`} src={'Images/guy (8).jpg'} alt='picture'/>
-    <div className={`center-col w-full md:w-1/3  m-auto`}>
+    <div className={`center-col w-full md:w-1/3 h-auto  m-auto`}>
 
        <div className={`p-4`}>
        About Us Welcome to Kamareh — a brand that celebrates individuality, versatility, and timeless style.
