@@ -14,6 +14,7 @@ import { FaShoppingCart } from "react-icons/fa";
 
 function ShopItem({ shopItems, location = 'HotTools', onShopPage }) {
     const { name, images, metadata } = shopItems ? shopItems : { name: 'Item', images: [] }
+    console.log(name)
     const { price } = metadata || { price: 0 }
     const [productsLoaded, setProductsLoaded] = useState(false)
     const [ShowQuickView, setShowQuickView] = useState(false)
