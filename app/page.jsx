@@ -19,8 +19,8 @@ function Home() {
       <EmblaCarousel
         noArrow={true}
         vid={'videos/MOV_3270.MOV'}
-        img1={'Images/guy (10).jpg'}
-        img2={'Images/guy (9).jpg'}
+        img1={'https://unsplash.com/photos/a-man-sitting-in-the-back-of-a-truck-SNnphyiK3QA'}
+        img2={'https://unsplash.com/photos/a-man-in-a-black-hoodie-getting-out-of-a-van-4fV6prPjV-g'}
 
       />
 
