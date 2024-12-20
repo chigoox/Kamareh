@@ -47,7 +47,7 @@ const EmblaCarouselThumb = ({ slides, options }) => {
                 </div>
             </div>
 
-            <div className="emblathumb-thumbs border-y p-2 w-full md:w-96 m-auto">
+            {/*  <div className="emblathumb-thumbs border-y p-2 w-full md:w-96 m-auto">
                 <div className="emblathumb-thumbs__viewport" ref={emblaThumbsRef}>
                     <div className="embla-thumbs__container flex">
                         {slides?.map((value, index) => (
@@ -61,7 +61,7 @@ const EmblaCarouselThumb = ({ slides, options }) => {
                         ))}
                     </div>
                 </div>
-            </div>
+            </div>*/}
         </div>
     )
 }

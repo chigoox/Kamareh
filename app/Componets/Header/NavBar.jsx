@@ -17,7 +17,7 @@ import Cart from './Cart'
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Button, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu } from "@nextui-org/react";
 import { AiFillHome, AiOutlineShoppingCart } from 'react-icons/ai'
 import Link from 'next/link'
-import { IoMenu } from "react-icons/io5";
+import { CiMenuBurger } from "react-icons/ci";
 
 const alexFont = Bebas_Neue({
     weight: '400',
@@ -91,8 +91,9 @@ function NavBar() {
         )
     }
     const menuItems = [
-        "New Arrivals",
-        "Tops",
+        "HOME",
+        "NEW ARRIVALS",
+        "ABOUT US"
 
 
     ];
@@ -110,7 +111,7 @@ function NavBar() {
             <Navbar disableAnimation={true} className='bg-white' isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
                 <NavbarContent>
                     <NavbarMenuToggle
-                        icon={<IoMenu size={32} />}
+                        icon={<CiMenuBurger size={32} />}
                         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                         className="sm:hidden text-black"
                     />
@@ -140,10 +141,10 @@ function NavBar() {
                                 color={
                                     "foreground"
                                 }
-                                className="w-full text-xl font-bold"
+                                className="w-full text-xl "
                                 href={{
-                                    pathname: `/Shop`,
-                                    query: { name: item }
+                                    pathname: (item != ('HOME') && item != ('ABOUT US')) ? `/Shop` : item == ('HOME') ? `/` : `/AboutUs`  ,
+                                    query: (item != ('HOME') && item != ('ABOUT US'))  ? { name: item } : null
                                 }}
                                 size="lg"
                             >
